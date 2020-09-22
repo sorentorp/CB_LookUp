@@ -11,13 +11,16 @@ function queryCBS(sernum) {
   var sernoin = sernum;
   if (!sernoin.trim()) {{var sernoin = "No serial"};}
   else {{var serno = sernoin}
-  var qUser = "select B,A,D where B contains '" + serno + "'";//You can select any three columns you want to be in the result
+  var qUser = "select B,C,D,E where B contains '" + serno + "'"; //You can select any four columns you want to be in the result
   var result = Utils.gvizQuery(
-    "Replace with fileID of your CB_Activity spreadsheet",
+    "*********insert*document-id********",
     qUser,
     "Devices",
-    "A2:D");//If you change the query above, you may also need to change this range. Remember to edit the column headers, if you do.
+    "B2:E");//If you change the query above, you may also need to change this range. Remember to edit the column headers, if you do.
   }
-  Logger.log([serno, result]); // Logging both incoming serial and result to console. Can be disabled.
+ // Logger.log([serno, result]); // Logging both incoming serial and result to console. Can be disabled.
   return [result];
 }
+
+
+
