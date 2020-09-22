@@ -1,7 +1,7 @@
 function doGet(e){
   
   var t = HtmlService.createTemplateFromFile("page");
-  return t.evaluate().setTitle("CB_LookUp");
+  return t.evaluate().setTitle("Find Chromebook");
 }
 
 function include(filename) {
