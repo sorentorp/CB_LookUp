@@ -11,13 +11,16 @@ function queryUserDevices(uname) {
   var userinfoin = uname;
   if (!userinfoin.trim()) {{var userinfo = "No user"};}
   else {{var userinfo = userinfoin}
-  var qUser = "select B,A,D where D = '" + userinfo + "'";//You can select any three columns you want to be in the result
+  var qUser = "select B,C,D,E where C = '" + userinfo + "'";//You can select any four columns you want to be in the result
   var result = Utils.gvizQuery(
-    "Replace with fileID of your CB_Activity spreadsheet",
+    "********insert*documentid***************",
     qUser,
     "Devices",
-    "A2:D");//If you change the query above, you may also need to change this range. Remember to edit the column headers, if you do.
+    "B2:E");//If you change the query above, you may also need to change this range. Remember to edit the column headers, if you do.
   } 
-  Logger.log([userinfo, result]);// Logging both incoming email address and result to console. Can be disabled.
+ // Logger.log([userinfo, result]);// Logging both incoming email address and result to console. Can be disabled.
   return [result];
 }
+
+
+
