@@ -14,25 +14,26 @@
   <body>
   <div class="container">
 
-    <h4>Look up Chrome Device Info from CB_Activity</h4>
-    <h6>Database is updated every hour. Search takes a few seconds to complete.</h6>
-    <h5>Search by (partial) serial number, or by email address</h5>
+    <h4>Find forbundne enheder og brugere</h4>
+    <h6>Databasen bliver opdateret hver time.</h6>
+    <h5>Søg i hele eller dele af serienumre eller på brugerens UNI-login@aaks.dk</h5>
     <div class="row">
       <div class="input-field col s4">
-      <input placeholder="Enter serial here" type="text" id="serial" class="card-panel #f5f5f5 grey lighten-4 validate"><button class="waves-effect waves-light btn-small" id="btnserno">Submit</button></div>
+      <input placeholder="Skriv serienummer her med store bogstaver" type="text" id="serial" class="card-panel #f5f5f5 grey lighten-4 validate"><button class="waves-effect waves-light btn-small" id="btnserno">Søg</button></div>
       <div class="input-field col s4">
-      <input placeholder="Enter email address here" type="text" id="username" class="card-panel #f5f5f5 grey lighten-4"><button class="waves-effect waves-light btn-small" id="btnusername">Submit</button></div>
+      <input placeholder="Skriv fulde @aaks.dk mail her" type="text" id="username" class="card-panel #f5f5f5 grey lighten-4"><button class="waves-effect waves-light btn-small" id="btnusername">Søg</button></div>
     </div>
 
     <br><br>
-    <h4>Results <button class="waves-effect waves-light btn-small" id="clearResults">Clear Results</button></h4>
+    <h4>Results <button class="waves-effect waves-light btn-small" id="clearResults">Ryd resultater</button></h4>
 
         <table>
           <thead>
           <tr>
-              <th><h6>Serial</h6></th>
-              <th><h6>Device OU</h6></th>
-              <th><h6>Most Recent User</h6></th>
+              <th><h6>Serie nr.</h6></th>
+              <th><h6>Sidste bruger</h6></th>
+              <th><h6>Næst-sidste bruger</h6></th>
+              <th><h6>Tredje-sidste bruger</h6></th>
           </tr>
           </thead>
           <tbody id="idCBS">
